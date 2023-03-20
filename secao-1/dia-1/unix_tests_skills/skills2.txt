@@ -1,0 +1,8 @@
+Internet
+Unix
+Bash
+C++
+Arduino
+CLP
+Inglês
+Japonês
