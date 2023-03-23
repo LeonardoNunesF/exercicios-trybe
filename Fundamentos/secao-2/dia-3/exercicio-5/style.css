@@ -34,3 +34,29 @@ li em {
 .pink {
     background-color: pink;
 }
+
+#listaAliados li a:hover{
+    font-weight: 700;
+}
+
+#listaAliadosli a[href*="stackoverflow"] {
+
+    color: orange;
+  
+  }
+  
+  #listaAliados li a[href*="w3schools"] {  
+    color: green;  
+  }
+  
+  #listaAliados li a[href*="mozilla"] {  
+    color: black;  
+  }
+  
+  #listaAliados li a[href*="devdocs"] {  
+    color: rgb(255, 136, 0);  
+  }
+  
+  #listaAliados li a[href*="trybe"] {  
+    color: green;  
+  }
