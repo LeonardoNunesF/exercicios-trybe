@@ -7,6 +7,5 @@ let indexOfPortfolio = menu.indexOf("Portfólio"); //Procure o índice do valor 
 
 console.log(indexOfPortfolio);
 
-console.log(menu); //Adicione o valor “Contato” no final do array 
-
-menu.push('Contato');
+menu.push('Contato'); //Adicione o valor “Contato” no final do array
+console.log(menu);  
