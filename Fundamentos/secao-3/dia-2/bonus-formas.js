@@ -19,3 +19,7 @@ for (let i =0; i<n;i++){
     console.log(prinT);
     prinT =  prinT + repeat;
 }
+
+//Agora, inverta o lado do triângulo.
+
+prinT = '';
