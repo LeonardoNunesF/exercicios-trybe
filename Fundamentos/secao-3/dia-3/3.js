@@ -3,21 +3,59 @@
 
 let clientesTrybeBank = ['Ada', 'John', 'Gus'];
 
-function removeCliente(cliente) {
-  if (typeof cliente === 'string') {
-    let clienteEncontrado = false;
-    for (let index = 0; index < clientesTrybeBank.length; index += 1) {
-      if (cliente === clientesTrybeBank[index]) {
-        clientesTrybeBank.splice(index, 1);
-        clienteEncontrado = true;
-        return 'Cliente excluída(o) com sucesso.';
-      }
+function invalidClient(cliente){
+    if (typeof cliente !== 'string') {
+        return 'O parâmetro passado deve ser do tipo "string"!';
     }
+    else {
+        return true;
+    }
+}
 
-    if (clienteEncontrado === false) {
-      return 'Cliente não encontrado'
+function foundClient(cliente){
+    for (let index = 0; index < clientesTrybeBank.length; index += 1) {
+        if (cliente === clientesTrybeBank[index]) {
+            return index;
+          }
     }
-  } else {
-    return 'O parâmetro passado deve ser do tipo "string"!';
+    return false;
+}
+
+function removeClient(cliente) {
+    let validacao = invalidClient(cliente);  
+    if (validacao !== true) {  
+      return validacao;  
+    }  
   }
-};
+
+function removeClient(cliente) {
+    let validacao = invalidClient(cliente);  
+    if (validacao !== true) {  
+      return validacao;  
+    }  
+  
+    let index = foundClient(cliente);  
+    if (index === false) {  
+      return 'Cliente não encontrada(o).'  
+    }  
+  }
+
+  function removeClient(cliente) {
+    let validacao = invalidClient(cliente);  
+    if (validacao !== true) {  
+      return validacao;  
+    }  
+  
+    let index = foundClient(cliente);  
+    if (index === false) {  
+      return 'Cliente não encontrada(o).'  
+    }  
+  
+    clientesTrybeBank.splice(index, 1);  
+    return 'Cliente excluída(o) com sucesso.';  
+  }
+
+console.log(removeClient(false)); 
+console.log(removeClient('Barney')); 
+console.log(removeClient('John')); 
+console.log(clientesTrybeBank); 
