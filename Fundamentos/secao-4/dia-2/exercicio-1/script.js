@@ -85,19 +85,38 @@ for(let i = 0; i < 3; i += 1) {
 // alterações:
 
 // 1 - Adicione a classe title na tag h1 criada;
+const title = document.querySelector('h1');
+title.className = 'title';
+
 // 2 - Adicione a classe description nas 3 tags h3 criadas;
+// adicionado h3[index].className = 'description'; no 9
+const h3 = document.getElementsByTagName('h3');
+for (let i = 0; i < 3; i += 1) {
+  h3[i].className = 'description';
+}
+
 // 3 - Remova a section criada no passo 5 
 // (aquela que possui a classe left-content) 
 // por meio da função .removeChild();
+const sectionLeftContent = document.getElementsByClassName('left-content')[0];
+mainContent.removeChild(sectionLeftContent);
+
 // Centralize a section criada no passo 6 
 // (aquela que possui a classe right-content).
+const sectionRightContent = document.getElementsByClassName('right-content')[0];
+
 
 // De olho na dica 👀: Para centralizar a section, 
 // basta configurar o margin-right: auto da section.
+sectionRightContent.style.marginRight = 'auto';
 
 // 4 - Troque a cor de fundo do elemento-pai da 
 // section criada no passo 3 (aquela que possui a 
 //     classe center-content) para a cor verde;
+const sectionCenterContent = document.getElementsByClassName('center-content')[0];
+sectionCenterContent.parentNode.style.backgroundColor = 'green';
+
 // 5 - Remova os dois últimos elementos (nove e dez) 
 // da lista criada no passo 8.
-
+ul.lastChild.remove();
+ul.lastChild.remove();
