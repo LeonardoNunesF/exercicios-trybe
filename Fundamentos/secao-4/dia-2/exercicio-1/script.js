@@ -73,3 +73,8 @@ rightSection.appendChild(ul);
 
 // 9 - Adicione 3 tags h3, todas filhas do main criado 
 // no passo 2. 
+for(let i = 0; i < 3; i += 1) {
+    const h3 = document.createElement('h3');
+    h3.innerText = i;
+    mainContent.appendChild(h3);
+}
