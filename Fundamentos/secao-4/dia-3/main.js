@@ -38,7 +38,11 @@ myWebpage.addEventListener('dbclick', () => {
 // a cor do mesmo.
 myWebpage.addEventListener('mouseover', (event) => {
     event.target.style.color = 'red';
-})
+});
+
+myWebpage.addEventListener('mouseout', (event) => {
+    event.target.style.color = 'unset';
+});
 
 // Segue abaixo um exemplo de uso do event.target.
 
