@@ -1,0 +1,18 @@
+{
+  "name": "exerciciofrontenddia1secao1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --open",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js"
+  },
+  "author": "Leonardo Nunes",
+  "license": "ISC",
+  "dependencies": {
+    "@trybe/eslint-config-frontend": "^1.11.3",
+    "nanoid": "^4.0.2",
+    "validator": "^13.9.0",
+    "vite": "^4.3.9"
+  }
+}
